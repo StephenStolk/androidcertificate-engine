@@ -49,21 +49,21 @@ const generateImage = async (name) => {
 
     // Load background certificate image
     const backgroundImage = new Image();
-    backgroundImage.src = "./certificate/cert.png"; // Replace with your background image URL
+    backgroundImage.src = "./certificate/webworkcertificateimg.jpg"; // Replace with your background image URL
 
     // Wait for the background image to load
     await new Promise((resolve, reject) => {
         backgroundImage.onload = () => resolve();
         backgroundImage.onerror = (err) => reject(err);
     });
-
+  
     // Draw background image
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 
     // Draw text over the background image
-    ctx.fillStyle = "#000000";
-    ctx.font = "40px Arial";
-    ctx.fillText(`${name}`, 50, 300); // Adjust coordinates as needed
+    ctx.fillStyle = "#82b5c6";
+    ctx.font = "55px Great Vibes,cursive";
+    ctx.fillText(`${name}`, 200, 350); // Adjust coordinates as needed
 
     // Convert canvas to data URL
     const dataUrl = canvas.toDataURL("image/png");
