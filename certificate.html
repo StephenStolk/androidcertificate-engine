@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate for WebWorks</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex text-lg font-semibold text-gray-700 items-center">
+                <img src="/assets/androidlogo.jpg" class="w-12" />
+                <a href="/index.html" class="text-2xl font-bold text-gray-800 lg:text-3xl ml-2">Android Club</a>
+                
+            </div>
+            <div class="lg:hidden">
+                <button id="nav-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="nav-menu" class="hidden lg:flex lg:items-center w-full lg:w-auto">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-4">
+                    <a href="/index.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Home</a>
+                    <a href="/Leaderboard.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Leaderboard</a>
+                    <a href="/certificate.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Certificate</a>
+                </div>
+            </nav>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden absolute top-0 left-0 h-screen w-full bg-white shadow-md transform -translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex flex-col h-full justify-between p-4">
+                    <button id="close-menu" class="text-gray-700 self-end">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div class="flex flex-col h-full justify-center items-center space-y-4">
+                        <a href="/index.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Home</a>
+                        <a href="/Leaderboard.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Leaderboard</a>
+                        <a href="/certificate.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Certificate</a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <header class="flex flex-col items-center text-center mb-12">
+            <img src="./assets/androidlogo.jpg" alt="Android Club logo" class=" w-48 mb-4 rounded-full shadow-lg">
+            <h4 class="text-2xl font-semibold">Get your Participation Certificate of Web Works</h4>
+        </header>
+        <div class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto">
+            <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Select Your Name</label>
+            <select required name="Name" id="name" class="block w-full p-2 border border-gray-300 rounded-md mb-4">
+                <option value="" disabled selected>Select your name</option>
+                <option value="Dev Agarwal">Dev Agarwal</option>
+                <option value="Yashvanth karunakaran">Yashvanth karunakaran</option>
+                <option value="Pragati Maheshwari">Pragati Maheshwari</option>
+                <option value="Sonaa Rajagopal">Sonaa Rajagopal</option>
+                <option value="Ayush Kumar Acharya">Ayush Kumar Acharya</option>
+                <option value="M. Aishwaryaa shree">M. Aishwaryaa shree</option>
+                <option value="ANKUSH KUMAR JAISWAL">ANKUSH KUMAR JAISWAL</option>
+                <option value="Aswin Raaj P S">Aswin Raaj P S</option>
+                <option value="Shreyash Gautam">Shreyash Gautam</option>
+                <option value="Ananya Vinay">Ananya Vinay</option>
+                <option value="SUHANI JAIN A">SUHANI JAIN A</option>
+                <option value="Devika Prashant">Devika Prashant</option>
+                <option value="YUGAL GAUR">YUGAL GAUR</option>
+                <option value="K.Sai suhas">K.Sai suhas</option>
+                <option value="Giridharan R E">Giridharan R E</option>
+                <option value="Anish Raghavendra">Anish Raghavendra</option>
+                <option value="M Revanth Kanna">M Revanth Kanna</option>
+                <option value="Pulkit">Pulkit</option>
+                <option value="Abinav N">Abinav N</option>
+                <option value="M Kopika">M Kopika</option>
+                <option value="M.Muralikrishnan">M.Muralikrishnan</option>
+                <option value="Soorya kiran s">Soorya kiran s</option>
+                <option value="Kumar abhishek">Kumar abhishek</option>
+                <option value="AARAV SHARMA">AARAV SHARMA</option>
+                <option value="Marushka Rita Fernandes">Marushka Rita Fernandes</option>
+                <option value="Dipsita Rout">Dipsita Rout</option>
+                <option value="Aditya Vasudev K">Aditya Vasudev K</option>
+                <option value="KAPILESH DA">KAPILESH DA</option>
+                <option value="Mridula Prasad">Mridula Prasad</option>
+                <option value="Anshuman Panda">Anshuman Panda</option>
+                <option value="Kantamneni Pranith">Kantamneni Pranith</option>
+                <option value="Samyuktha S">Samyuktha S</option>
+                <option value="Shakthireka Karthikeyan">Shakthireka Karthikeyan</option>
+                <option value="Dhanvasanth R">Dhanvasanth R</option>
+                <option value="Navomi S Ramesh">Navomi S Ramesh</option>
+                <option value="Shikhar Burman">Shikhar Burman</option>
+                <option value="Sakshi Biyani">Sakshi Biyani</option>
+                <option value="Vishaka Tibrewal">Vishaka Tibrewal</option>
+                <option value="Joe V Kadavan">Joe V Kadavan</option>
+                <option value="Shreyash Gautam">Shreyash Gautam</option>
+                <option value="Harshita Ranjan">Harshita Ranjan</option>
+                <option value="Ananya Kumari">Ananya Kumari</option>
+                <option value="Akshita Jawahar">Akshita Jawahar</option>
+                <option value="Abdulla M Ali">Abdulla M Ali</option>
+                <option value="ARNAV KUMAR">ARNAV KUMAR</option>
+                <option value="Drona Srivastava">Drona Srivastava</option>
+                <option value="Subbramanian VC">Subbramanian VC</option>
+                <option value="Narmadha J S">Narmadha J S</option>
+                <option value="M. Srikanth karthikeyan">M. Srikanth karthikeyan</option>
+                <option value="Yash Rathore">Yash Rathore</option>
+                <option value="dhruv dhoundiyal">dhruv dhoundiyal</option>
+                <option value="Neeraj Prasanna">Neeraj Prasanna</option>
+                <option value="Aayush Tripathi">Aayush Tripathi</option>
+                <option value="Garv Gupta">Garv Gupta</option>
+                <option value="Aishik Tokdar">Aishik Tokdar</option>
+                <option value="Dipayan Nandi">Dipayan Nandi</option>
+                <option value="VODURI SATHVIK BHASKAR">VODURI SATHVIK BHASKAR</option>
+                <option value="Lakshanyasri S R">Lakshanyasri S R</option>
+                <option value="Adhira K">Adhira K</option>
+                <option value="Girija G">Girija G</option>
+                <option value="Sanjana Reddy S">Sanjana Reddy S</option>
+                <option value="Suhas Koheda">Suhas Koheda</option>
+                <option value="SWATHY SREE R">SWATHY SREE R</option>
+                <option value="Allen Bersho">Allen Bersho</option>
+                <option value="Yuvalakshmi M">Yuvalakshmi M</option>
+                <option value="Abraham Justin">Abraham Justin</option>
+                <option value="Steve Joseph">Steve Joseph</option>
+                <option value="Naina Mogha">Naina Mogha</option>
+                <option value="Varun Krishnan">Varun Krishnan</option>
+                <option value="S.Rohanraj">S.Rohanraj</option>
+                <option value="Shreyas Kumar">Shreyas Kumar</option>
+                <option value="Layashree L">Layashree L</option>
+                <option value="Anant Kumar Shukla">Anant Kumar Shukla</option>
+                <option value="Shreyas S">Shreyas S</option>
+                <option value="Swetha S">Swetha S</option>
+                <option value="Sudarshan Manikandan">Sudarshan Manikandan</option>
+                <option value="Bhadri Raj T">Bhadri Raj T</option>
+                <option value="Gole Sanskruti Samadhan">Gole Sanskruti Samadhan</option>
+                <option value="Gopinath S">Gopinath S</option>
+                <option value="Pranav Dudala">Pranav Dudala</option>
+                <option value="Sujal Khera">Sujal Khera</option>
+                <option value="Beas Jana">Beas Jana</option>
+                <option value="Guha Pranav Yelchuru">Guha Pranav Yelchuru</option>
+                <option value="Rohith Anand">Rohith Anand</option>
+                <option value="Kriti Suri">Kriti Suri</option>
+                <option value="Viju Sanjai">Viju Sanjai</option>
+                <option value="Mansurah M">Mansurah M</option>
+            </select>
+            <button id="submitBtn" class="w-full bg-purple-500 text-white text-lg font-semibold px-6 py-3 rounded hover:bg-purple-700">Get Certificate</button>
+
+            <div id="certificateContainer" class="mt-6" style="display: none;">
+                <img id="certificateImage" class="w-full rounded-lg shadow-md">
+                <div class="flex flex-col items-center mt-4">
+                    <button id="downloadCertificateBtn" class="bg-blue-500 text-white text-lg font-semibold px-4 py-2 rounded hover:bg-blue-700 mb-2">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button id="instagramStoryBtn" class="bg-pink-500 text-white text-lg font-semibold px-5 py-2 rounded hover:bg-pink-700 mb-2">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </button>
+                    <button id="linkedinPostBtn" class="bg-blue-700 text-white text-lg font-semibold px-6 py-2 rounded hover:bg-blue-900">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </button>
+                </div>
+                <div id="captionContainer" class="caption-container mt-4">
+                    <p class="font-semibold">Captions:</p>
+                    <ul id="captionList" class="list-disc list-inside"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./FileSaver.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('-translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('-translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+        });
+    </script>
+</body>
+
+</html>

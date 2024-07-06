@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Padhega India</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none; 
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen no-scrollbar"> 
+
+    <!-- Navbar -->
+    <header class="bg-white">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex text-lg font-semibold text-gray-700 items-center">
+                <img src="/assets/androidlogo.jpg" class="w-12 rounded-full" />
+                <a href="/index.html" class="text-2xl font-bold text-gray-800 lg:text-3xl ml-2">Android Club</a>
+                
+            </div>
+            <div class="lg:hidden">
+                <button id="nav-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="nav-menu" class="hidden lg:flex lg:items-center w-full lg:w-auto">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-4">
+                    <a href="/index.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Home</a>
+                    <a href="/Leaderboard.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Leaderboard</a>
+                    <a href="/certificate.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Certificate</a>
+                </div>
+            </nav>
+            <!-- Mobile -->
+            <div id="mobile-menu" class="lg:hidden absolute top-0 left-0 h-screen w-full bg-white shadow-md transform -translate-x-full transition-transform duration-300 ease-in-out no-scrollbar">
+                <div class="flex flex-col h-full justify-between p-4">
+                    <button id="close-menu" class="text-gray-700 self-end">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div class="flex flex-col h-full justify-center items-center space-y-4">
+                        <a href="/index.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Home</a>
+                        <a href="/Leaderboard.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Leaderboard</a>
+                        <a href="/certificate.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between h-screen no-scrollbar">
+        <div class="md:w-1/2">
+            <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl md:ml-8">Welcome</h1>
+            <p class="scroll-m-20 border-b pb-2 mt-2 text-3xl font-semibold tracking-tight md:ml-8">Checkout the winners and get your special certificates right here !</p>
+            <button id="navigateBtn" class="mt-6 bg-purple-500 text-white text-lg font-semibold px-6 py-3 rounded hover:bg-purple-700 md:ml-8">Get Certificate</button>
+        </div>
+        <div class="md:w-1/2 mt-12 md:mt-0">
+            <img src="./assets/216414.gif" alt="Animated GIF" class="w-[400px] h-[300px] rounded-lg mx-auto"> <!-- Adjusted size of the GIF -->
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('navigateBtn').addEventListener('click', function() {
+            window.location.href = 'certificate.html';
+        });
+
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('-translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('-translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+        });
+    </script>
+
+</body>
+</html>

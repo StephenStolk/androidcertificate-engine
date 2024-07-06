@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - WebWorks</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;  
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen no-scrollbar">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex text-lg font-semibold text-gray-700 items-center">
+                <img src="/assets/androidlogo.jpg" class="w-12" />
+                <a href="/index.html" class="text-2xl font-bold text-gray-800 lg:text-3xl ml-2">Android Club</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="nav-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="nav-menu" class="hidden lg:flex lg:items-center w-full lg:w-auto">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-4">
+                    <a href="/index.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Home</a>
+                    <a href="/Leaderboard.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Leaderboard</a>
+                    <a href="/certificate.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Certificate</a>
+                </div>
+            </nav>
+            <!-- Mobile -->
+            <div id="mobile-menu" class="lg:hidden absolute top-0 left-0 h-screen w-full bg-white shadow-md transform -translate-x-full transition-transform duration-300 ease-in-out no-scrollbar">
+                <div class="flex flex-col h-full justify-between p-4">
+                    <button id="close-menu" class="text-gray-700 self-end">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                    <div class="flex flex-col h-full justify-center items-center space-y-4">
+                        <a href="/index.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Home</a>
+                        <a href="/Leaderboard.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Leaderboard</a>
+                        <a href="/certificate.html" class="text-gray-700 hover:text-gray-900 px-4 py-2">Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">Leaderboard - WebWorks</h1>
+            <button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-700">Special Achievers</button>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+                <thead>
+                    <tr>
+                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">#</th>
+                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Participant/Team Name</th>
+                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Participation</th>
+                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Date</th>
+                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">SDG</th>
+                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-3 px-4 text-center">1</td>
+                        <td class="py-3 px-4">Shikhar B</td>
+                        <td class="py-3 px-4">Solo</td>
+                        <td class="py-3 px-4">06/07/2024</td>
+                        <td class="py-3 px-4">4</td>
+                        <td class="py-3 px-4 text-center bg-yellow-200">42</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="flex justify-center mt-6">
+            <button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-700">Load More</button>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('-translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('-translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+        });
+    </script>
+
+</body>
+</html>
