@@ -65,23 +65,210 @@
             <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
                 <thead>
                     <tr>
-                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">#</th>
+                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">#Rank</th>
+                        <!-- <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Rank</th> -->
+                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">TimeStamp</th>
                         <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Participant/Team Name</th>
-                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Participation</th>
-                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Date</th>
-                        <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">SDG</th>
+                        <!-- <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Participation</th> -->
+                        
+                        <!-- <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">SDG</th> -->
                         <th class="py-3 px-4 bg-gray-200 text-gray-600 font-bold">Points</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="border-b text-center">
-                        <td class="py-3 px-4 text-center">1</td>
-                        <td class="py-3 px-4">Shikhar B</td>
-                        <td class="py-3 px-4">Solo</td>
-                        <td class="py-3 px-4">06/07/2024</td>
-                        <td class="py-3 px-4">4</td>
-                        <td class="py-3 px-4 text-center bg-yellow-200">42</td>
-                    </tr>
+                    <script>
+                        const leaderboardData = [
+    {
+      Rank: 1,
+      Timestamp: "7-7-2024 19:20:00",
+      Name: "CSS Champions",
+      RegNo: "23BAI1589",
+      Link: "https://sdg-green.vercel.app/",
+      Marks: 97.0,
+    },
+    {
+      Rank: 2,
+      Timestamp: "7-7-2024 18:31:22",
+      Name: "Shamita R",
+      RegNo: "22BEE1072",
+      Link: "https://neshamtree.in/wallofhappiness/",
+      Marks: 94.0,
+    },
+    {
+      Rank: 3,
+      Timestamp: "7-7-2024 19:00:52",
+      Name: "Adhira",
+      RegNo: "23BRS1131",
+      Link: "https://adhirak.github.io/EcoGuardians.github.io/",
+      Marks: 92.0,
+    },
+    {
+      Rank: 4,
+      Timestamp: "7-7-2024 19:07:35",
+      Name: "Webzters ",
+      RegNo: "22BAI1196",
+      Link: "https://learnacad.vercel.app/",
+      Marks: 84.0,
+    },
+    {
+      Rank: 5,
+      Timestamp: "7-7-2024 18:06:31",
+      Name: "Girija G",
+      RegNo: "23BAI1403",
+      Link: "https://olakino-sdg-3-health-tech-hackthon.vercel.app",
+      Marks: 69.0,
+    },
+    {
+      Rank: 6,
+      Timestamp: "7-7-2024 18:11:37",
+      Name: "Suhas Koheda",
+      RegNo: "23BAI1148",
+      Link: "https://nature-for-future-production.up.railway.app/",
+      Marks: 69.0,
+    },
+    {
+      Rank: 7,
+      Timestamp: "7-7-2024 18:05:02",
+      Name: "Beas Jana",
+      RegNo: "23BRS1276",
+      Link: "https://sdg4beas.vercel.app/",
+      Marks: 68.0,
+    },
+    {
+      Rank: 8,
+      Timestamp: "7-7-2024 19:22:35",
+      Name: "Neeraj Prasanna",
+      RegNo: "23BLC1285",
+      Link: "https://neerajprasanna.github.io/WebWorks-Neeraj-SDG-4/",
+      Marks: 63.0,
+    },
+    {
+      Rank: 9,
+      Timestamp: "7-7-2024 18:30:54",
+      Name: "TEAM CROSSCODES ",
+      RegNo: "23BAI1587",
+      Link: "https://crosscodes.vercel.app/",
+      Marks: 60.0,
+    },
+    {
+      Rank: 10,
+      Timestamp: "7-7-2024 18:39:17",
+      Name: "VIT Nerds",
+      RegNo: "22BCE1546",
+      Link: "http://empowerherskills.unaux.com/",
+      Marks: 60.0,
+    },
+    {
+      Rank: 11,
+      Timestamp: "7-7-2024 18:18:19",
+      Name: "Navomi ",
+      RegNo: "22BCE1855",
+      Link: "https://navomi09.github.io/sdg3/",
+      Marks: 59.0,
+    },
+    {
+      Rank: 12,
+      Timestamp: "7-7-2024 18:45:32",
+      Name: "Sanjana Reddy S ",
+      RegNo: "23BAI1422",
+      Link: "https://sites.google.com/view/sdg11-devgrow/home",
+      Marks: 59.0,
+    },
+    {
+      Rank: 13,
+      Timestamp: "7-7-2024 19:09:02",
+      Name: "Joe V Kadavan",
+      RegNo: "23BLC1277",
+      Link: " https://joevkadavan.github.io/WEB_works/",
+      Marks: 59.0,
+    },
+    {
+      Rank: 14,
+      Timestamp: "7-7-2024 18:45:14",
+      Name: "Varun Krishnan / mission-enhans",
+      RegNo: "23BLC1307",
+      Link: "https://webbyvarun.wixsite.com/mission-enhans",
+      Marks: 58.0,
+    },
+    {
+      Rank: 15,
+      Timestamp: "7-7-2024 18:07:13",
+      Name: "Dev Dreamers",
+      RegNo: "22BAI1072",
+      Link: "https://global-artisans-hub.vercel.app/",
+      Marks: 52.0,
+    },
+    {
+      Rank: 16,
+      Timestamp: "7-7-2024 18:33:11",
+      Name: "Steve Joseph ",
+      RegNo: "22BCE5015",
+      Link: "https://u-can-officialo.vercel.app/",
+      Marks: 51.0,
+    },
+    {
+      Rank: 17,
+      Timestamp: "7-7-2024 20:15:54",
+      Name: "Golgappa warriors",
+      RegNo: "22BAI1044",
+      Link: "https://greenfeed.vercel.app/",
+      Marks: 48.0,
+    },
+    {
+      Rank: 18,
+      Timestamp: "7-7-2024 17:59:50",
+      Name: "Technorockers",
+      RegNo: "23BAI1202",
+      Link: "https://zero-hunger.onrender.com/?items=20&items=40#home",
+      Marks: 45.0,
+    },
+    {
+      Rank: 19,
+      Timestamp: "7-7-2024 19:28:13",
+      Name: "M.Srikanth Karthikeyan",
+      RegNo: "23BCE1089",
+      Link: "https://srikanthkarthikeyanwebsites.on.drv.tw/www.UpHustle.com/index_uph.html",
+      Marks: 41.0,
+    },
+    {
+      Rank: 20,
+      Timestamp: "7-7-2024 18:14:50",
+      Name: "SWATHY SREE R",
+      RegNo: "23BAI1338",
+      Link: "https://sites.google.com/view/swathy-web/home",
+      Marks: 32.0,
+    },
+    {
+      Rank: 21,
+      Timestamp: "7-7-2024 18:02:18",
+      Name: "ANKUSH KUMAR JAISWAL ",
+      RegNo: "23BLC1179",
+      Link: "https://github.com/Aarav3208/index",
+      Marks: 0.0,
+    },
+    {
+      Rank: 22,
+      Timestamp: "7-7-2024 19:34:59",
+      Name: "CodeSquad",
+      RegNo: "22MIS1028",
+      Link: "https://github.com/muralikrishnan2022/Captain-sHome",
+      Marks: 0.0,
+    },
+  ];
+
+                        const tbody = document.querySelector('tbody');
+                        leaderboardData.map(data => {
+                            const row = document.createElement('tr');
+                            row.className = 'border-b text-center';
+                            row.innerHTML = `
+                                <td class="py-3 px-4 text-center">${data.Rank}</td>
+                                <td class="py-3 px-4">${data.Timestamp}</td>
+                                <td class="py-3 px-4">${data.Name}</td>
+                                <td class="py-3 px-4 text-center ${data.Rank === 1 ? 'bg-yellow-200' : ''}">${data.Marks}</td>
+                            `;
+                            tbody.appendChild(row);
+                        });
+                    </script>
                 </tbody>
             </table>
         </div>
@@ -106,3 +293,4 @@
 
 </body>
 </html>
+
