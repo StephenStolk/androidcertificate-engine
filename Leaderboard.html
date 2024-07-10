@@ -59,7 +59,7 @@
     <main class="flex-grow container mx-auto px-6 py-12">
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-3xl font-bold text-gray-800">Leaderboard - WebWorks</h1>
-            <button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-700">Special Achievers</button>
+            <button id="special-achievers-btn" class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-700">Special Achievers</button>
         </div>
         <div class="overflow-x-auto">
             <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
@@ -80,18 +80,18 @@
                         const leaderboardData = [
     {
       Rank: 1,
-      Timestamp: "7-7-2024 19:20:00",
-      Name: "CSS Champions",
-      RegNo: "23BAI1589",
-      Link: "https://sdg-green.vercel.app/",
-      Marks: 97.0,
-    },
-    {
-      Rank: 2,
       Timestamp: "7-7-2024 18:31:22",
       Name: "Shamita R",
       RegNo: "22BEE1072",
       Link: "https://neshamtree.in/wallofhappiness/",
+      Marks: 97.0,
+    },
+    {
+      Rank: 2,
+      Timestamp: "7-7-2024 19:20:00",
+      Name: "CSS Champions",
+      RegNo: "23BAI1589",
+      Link: "https://sdg-green.vercel.app/",
       Marks: 94.0,
     },
     {
@@ -275,6 +275,22 @@
         <!-- <div class="flex justify-center mt-6">
             <button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-700">Load More</button>
         </div> -->
+
+    <section id="special-achievers" class="container mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Special Achievers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h3 class="text-xl font-semibold text-gray-800">Best Design</h3>
+                <iframe id="iframe-design" src="https://adhirak.github.io/EcoGuardians.github.io/" class="w-full h-64 mt-4 rounded-lg shadow-md" frameborder="0"></iframe>
+                <button onclick="window.open(document.getElementById('iframe-design').src, '_blank')" class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-700 mt-4">Preview</button>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h3 class="text-xl font-semibold text-gray-800">Best Idea/Solution</h3>
+                <iframe id="iframe-idea" src="https://crosscodes.vercel.app/index.html" class="w-full h-64 mt-4 rounded-lg shadow-md" frameborder="0"></iframe>
+                <button onclick="window.open(document.getElementById('iframe-idea').src, '_blank')" class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-700 mt-4">Preview</button>
+            </div>
+        </div>
+    </section>
     </main>
 
     <script>
@@ -288,6 +304,12 @@
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.add('-translate-x-full');
             mobileMenu.classList.remove('translate-x-0');
+        });
+
+        document.getElementById('special-achievers-btn').addEventListener('click', function() {
+            const section = document.getElementById('special-achievers');
+            section.scrollIntoView({ behavior: 'smooth' });
+            section.classList.remove('hidden');
         });
     </script>
 

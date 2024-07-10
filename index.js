@@ -7,10 +7,10 @@ const instagramStoryBtn = document.getElementById("instagramStoryBtn");
 const linkedinPostBtn = document.getElementById("linkedinPostBtn");
 
 submitBtn.addEventListener("click", async () => {
-    const val = capitalize(userName.value);
+    const val = capitalize(userName.value.trim());
 
     // Check if the text is empty or not
-    if (val.trim() !== "" && userName.checkValidity()) {
+    if (val !== "" && userName.checkValidity()) {
         await generateCertificate(val);
     } else {
         userName.reportValidity();
@@ -18,10 +18,7 @@ submitBtn.addEventListener("click", async () => {
 });
 
 const generateCertificate = async (name) => {
-    // Replace with your image generation logic
     const imageUrl = await generateImage(name);
-
-    // Display the generated image and show the certificate container
     certificateImage.src = imageUrl;
     certificateContainer.style.display = "block";
 
@@ -49,26 +46,24 @@ const generateImage = async (name) => {
 
     // Load background certificate image
     const backgroundImage = new Image();
-    backgroundImage.src = "./certificate/webworkcertificateimg.jpg"; // Replace with your background image URL
+        backgroundImage.src = "./certificate/webworkcertificateimg.jpg";
 
     // Wait for the background image to load
     await new Promise((resolve, reject) => {
         backgroundImage.onload = () => resolve();
         backgroundImage.onerror = (err) => reject(err);
     });
-  
-    // Draw background image
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-
-    // Draw text over the background image
     ctx.fillStyle = "#82b5c6";
-    ctx.font = "55px Great Vibes,cursive";
-    ctx.fillText(`${name}`, 200, 350); // Adjust coordinates as needed
+    ctx.font = "55px 'Great Vibes', cursive";
+    const textWidth = ctx.measureText(name).width;
+    const x = (canvas.width - textWidth) / 2;
 
-    // Convert canvas to data URL
+    ctx.fillText(name, x, 350); 
     const dataUrl = canvas.toDataURL("image/png");
     return dataUrl;
 };
+
 
 const downloadImage = (url, filename) => {
     // Create an anchor element
@@ -84,39 +79,38 @@ const downloadImage = (url, filename) => {
     document.body.removeChild(a);
 };
 
-const postToInstagramStory =  () => {
-  const instagramWebUrl = `https://www.instagram.com/`;
-  window.open(instagramWebUrl, '_blank');
+const postToInstagramStory = () => {
+    const instagramWebUrl = `https://www.instagram.com/`;
+    window.open(instagramWebUrl, '_blank');
 };
 
 const postToLinkedIn = () => {
-  const linkedInWebUrl = `https://www.linkedin.com/sharing/share-offsite/`;
-  window.open(linkedInWebUrl, '_blank');
+    const linkedInWebUrl = `https://www.linkedin.com/sharing/share-offsite/`;
+    window.open(linkedInWebUrl, '_blank');
 };
-
 
 const capitalize = (str, lower = false) =>
     (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
         match.toUpperCase()
     );
+
 // Captions array
 const captions = [
-  "Excited to share my participation certificate from Android Club! 🌟 Thank you @AndroidClub for organizing #WebWorks #CertificateOfParticipation",
-  "Just received my Web Works certificate from Android Club. 🎉 Huge thanks to @AndroidClub for this opportunity! #WebWorks #Certificate",
-  "Feeling proud to be part of the Android Club's Web Works event! 🏆 Thank you @AndroidClub for the amazing experience! #WebWorks #ProudMoment",
-  "Honored to receive my certificate for Web Works organized by Android Club. 📜 Thank you @AndroidClub for this recognition! #WebWorks #Honored"
+    "Excited to share my participation certificate from Android Club! 🌟 Thank you @AndroidClub for organizing #WebWorks #CertificateOfParticipation",
+    "Just received my Web Works certificate from Android Club. 🎉 Huge thanks to @AndroidClub for this opportunity! #WebWorks #Certificate",
+    "Feeling proud to be part of the Android Club's Web Works event! 🏆 Thank you @AndroidClub for the amazing experience! #WebWorks #ProudMoment",
+    "Honored to receive my certificate for Web Works organized by Android Club. 📜 Thank you @AndroidClub for this recognition! #WebWorks #Honored"
 ];
-
 
 // Function to populate captions
 const populateCaptions = () => {
-  const captionList = document.getElementById("captionList");
+    const captionList = document.getElementById("captionList");
 
-  captions.forEach(caption => {
-      const li = document.createElement("li");
-      li.textContent = caption;
-      captionList.appendChild(li);
-  });
+    captions.forEach(caption => {
+        const li = document.createElement("li");
+        li.textContent = caption;
+        captionList.appendChild(li);
+    });
 };
 
 // Call populateCaptions on page load

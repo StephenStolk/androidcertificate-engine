@@ -137,11 +137,13 @@ button#submitBtn:hover {
 .caption-list {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 .caption-list li {
   font-size: 1rem;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .caption-list li::before {
