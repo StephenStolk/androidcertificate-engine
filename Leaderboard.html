@@ -39,7 +39,7 @@
                 </div>
             </nav>
             <!-- Mobile -->
-            <div id="mobile-menu" class="lg:hidden absolute top-0 left-0 h-screen w-full bg-white shadow-md transform -translate-x-full transition-transform duration-300 ease-in-out no-scrollbar">
+            <div id="mobile-menu" class="lg:hidden absolute top-0 left-0 h-screen w-full bg-white shadow-md transform -translate-x-full transition-transform duration-200 ease-in-out no-scrollbar">
                 <div class="flex flex-col h-full justify-between p-4">
                     <button id="close-menu" class="text-gray-700 self-end">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -261,10 +261,10 @@
                             const row = document.createElement('tr');
                             row.className = 'border-b text-center';
                             row.innerHTML = `
-                                <td class="py-3 px-4 text-center">${data.Rank}</td>
-                                <td class="py-3 px-4">${data.Timestamp}</td>
-                                <td class="py-3 px-4">${data.Name}</td>
-                                <td class="py-3 px-4 text-center ${data.Rank === 1 ? 'bg-yellow-200' : ''}">${data.Marks}</td>
+                                <td class="py-3 px-4 text-center ${data.Rank === 1 ? 'bg-yellow-200' : ''}  ${data.Rank === 2 ? 'bg-yellow-200' : ''}">${data.Rank}</td>
+                                <td class="py-3 px-4 ${data.Rank === 1 ? 'bg-yellow-200' : ''} ${data.Rank === 2 ? 'bg-yellow-200' : ''}">${data.Timestamp}</td>
+                                <td class="py-3 px-4 ${data.Rank === 1 ? 'bg-yellow-200' : ''} ${data.Rank === 2 ? 'bg-yellow-200' : ''}">${data.Name}</td>
+                                <td class="py-3 px-4 text-center ${data.Rank === 1 ? 'bg-yellow-200' : ''} ${data.Rank === 2 ? 'bg-yellow-200' : ''} ">${data.Marks}</td>
                             `;
                             tbody.appendChild(row);
                         });
@@ -272,9 +272,9 @@
                 </tbody>
             </table>
         </div>
-        <div class="flex justify-center mt-6">
+        <!-- <div class="flex justify-center mt-6">
             <button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-700">Load More</button>
-        </div>
+        </div> -->
     </main>
 
     <script>
